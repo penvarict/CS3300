@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# use rails-controller-testing for method assert_template for testing
+# correct template rendering.
+gem 'rails-controller-testing'
 
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment

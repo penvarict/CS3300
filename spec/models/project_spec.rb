@@ -1,4 +1,5 @@
 require "rails_helper"
+# model unit tests for Project
 
 # from rspec tutorial:
 # https://github.com/UCCSCS3300/rails-rspec-tutorial/blob/master/README.md
