@@ -10,7 +10,11 @@ jobs:
       - checkout
       - run:
           name: rspec
-          command: bundle install && bundle exec rake db:migrate RAILS_ENV=test && bundle exec rspec
+          command: bundle install && bundle exec rake db:migrate RAILS_ENV=test &&  bundle exec rspec 
+          --format progress --format RspecJunitFormatter -o ~/spec/rspec.xml
+          when: always
+      - store_test_results:
+          path: ~/spec
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
