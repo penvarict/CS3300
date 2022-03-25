@@ -49,6 +49,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara', '>= 2.15'
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.7'
 end
@@ -73,6 +74,8 @@ end
 # Junit is a CircleCI test data collection gem. 
 gem 'rspec_junit_formatter'
 
+# Simplecov to generate code coverage reports. 
+gem 'simplecov', require: false
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

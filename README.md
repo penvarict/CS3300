@@ -1,15 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Build & Deployment Status
+**Circle CI, main branch status:** 
+[![CircleCI](https://circleci.com/gh/penvarict/CS3300/tree/main.svg?style=svg)](https://circleci.com/gh/penvarict/CS3300/tree/main) 
 
-Things you may want to cover:
+### Application Configurations
+Ruby Version 2.7.0. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
 
 * Database creation
 

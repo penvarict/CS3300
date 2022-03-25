@@ -6,9 +6,8 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
-  # GET /projects/1 or /projects/1.json
+  # GET /projects/1 or /projects/1.json, see: before_action method. 
   def show
-    @project = Project.find(params[:id])
   end
 
   # GET /projects/new
