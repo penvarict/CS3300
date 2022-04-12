@@ -10,6 +10,16 @@
   </head>
 
   <body>
+  <!--Login stuff from this tutorial (and from devise docs): https://www.youtube.com/watch?v=3vZtM2lskKM -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert%></p>
+    <% if student_signed_in? %>
+      <%= current_student.email %>
+      <%= link_to 'Log out', destroy_student_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Log in', new_student_session_path %>
+      <%= link_to 'Sign up', new_student_registration_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

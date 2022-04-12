@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :students
   root "projects#index"
   get '/projects/new', to: "projects#new"
   get '/projects/edit', to: "projects#edit"
