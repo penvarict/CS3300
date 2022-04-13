@@ -14,7 +14,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert%></p>
     <% if student_signed_in? %>
-      <%= current_student.email %>
+      <%= "Signed in as: " + current_student.email %>
       <%= link_to 'Log out', destroy_student_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Log in', new_student_session_path %>
