@@ -32,18 +32,29 @@ RSpec.describe ProjectsController, type: :controller do
     end
 
   end
+
   context "GET #edit" do
-  let!(:project) { Project.create(title: "Test title", description: "Test description") }
-  it "returns a success response" do
-    get :edit, params: { id: project }
-    expect(response).to be_success
+    let!(:project) { Project.create(title: "Test title", description: "Test description") }
+    it "returns a success response" do
+      get :edit, params: { id: project }
+      expect(response).to be_success
+      
+    end
     
-  end
-  
-  it "renders the edit template" do 
+    it "renders the edit template" do 
       get :edit, params: { id: project }
       expect(response).to render_template("edit")
+    end
   end
 
-end
+  context "An Existing Project" do
+    let!(:project) { Project.create(title: "Test title", description: "Test description") }
+    it "should destroy with a notice" do
+      # @request.env['devise.mapping'] = Devise.mappings[:student]
+      # sign_in @student
+      delete :destroy, params: {id: project} 
+      expect(response).to redirect_to(projects_url)
+    end
+
+  end
 end
