@@ -23,7 +23,7 @@ jobs:
       - checkout
       - heroku/install
       - heroku/deploy-via-git:
-          api-key : $MYHEROKU_AUTH_KEY
+          api-key : HEROKU_API_KEY
           app-name : secret-wave-09786
           branch : main
 
