@@ -22,7 +22,11 @@ jobs:
     steps:
       - checkout
       - heroku/install
-      - heroku/deploy-via-git
+      - heroku/deploy-via-git:
+        api-key : $MYHEROKU_AUTH_KEY
+        app-name : secret-wave-09786
+        branch : main
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -30,10 +34,6 @@ workflows:
   main: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - heroku/deploy-via-git:
-        api-key : $MYHEROKU_AUTH_KEY
-        app-name : secret-wave-09786
-        branch : main
       - deploy:
           requires:
             - build
