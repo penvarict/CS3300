@@ -27,10 +27,13 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+  main: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - build
+      - heroku/deploy-via-git:
+        api-key : $MYHEROKU_AUTH_KEY
+        app-name : secret-wave-09786
+        branch : main
       - deploy:
           requires:
             - build
