@@ -6,6 +6,10 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
+.nav-item:hover {
+  color: #535353 !important; 
+
+}
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -28,7 +32,6 @@ a {
 
   &:hover {
     color: #fff;
-    background-color: #000;
   }
 }
 
@@ -55,6 +58,7 @@ div {
   background-color: red;
   display: table;
 }
+
 
 #error_explanation {
   width: 450px;
