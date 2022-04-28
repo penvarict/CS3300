@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/projects/:id', to: "projects#show" 
   get '/students/sign_in(.:format)', to: "devise/sessions#new"
 
-
   resources :projects
   # See https://stackoverflow.com/a/5911863 for how the routing below works. (it is for the about me page)
   get '/:page' =>   "static#show"
