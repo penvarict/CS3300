@@ -1,0 +1,35 @@
+<h1 class="text-center">Charlie Penvari </h1>
+<h2 class="text-center">About Me </h2>
+<br>
+<h1 class="display-6 text-left">Resume</h2>
+<blockquote class="lead text-left">
+Data analytics professional. 2+ years experience in the public utilities industry. Data journalism and sports reporting enthusiast. Looking for a position
+in an organization that emphasizes the use of concepts in big-data and computer science to solve problems. 
+</blockquote>
+<p> More stuff and stuff ...
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati 
+cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+
+</p>
+<br>
+
+
+<h2 class="text-center">All Projects</h2>
+<table class="table">
+    <thead>
+        <th scope="col"> Project Name</th>
+        <th scope="col"> Project Description</th>
+    </thead>
+    <tbody>
+        <% Project.all.each do |project| %>
+            <tr>
+                <td><%= project.title%></td>
+                <td><%= project.description%></td>
+            <tr>
+        <% end %>
+    </tbody>
+
+</table>

@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #fff;
   color: #333;
@@ -5,6 +7,10 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+.nav-item:hover {
+  color: #535353 !important; 
+
 }
 
 p, ol, ul, td {
@@ -20,15 +26,14 @@ pre {
 }
 
 a {
-  color: #000;
+  color: rgb(255, 255, 255);
 
   &:visited {
-    color: #666;
+    color: rgb(255, 255, 255);
   }
 
   &:hover {
     color: #fff;
-    background-color: #000;
   }
 }
 
@@ -55,6 +60,7 @@ div {
   background-color: red;
   display: table;
 }
+
 
 #error_explanation {
   width: 450px;
