@@ -79,7 +79,10 @@ gem 'simplecov', require: false
 
 # devise for user login
 gem 'devise'
-1
+
+# jquery for responsive menu
+gem 'jquery-rails'
+
 # bootstrap for User Interface 
 gem 'bootstrap', '~> 5.1.3'
 
